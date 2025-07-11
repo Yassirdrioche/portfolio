@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectCard from "./ProjectCard";
 import ProjectFilter from "./ProjectFilter";
 import { projects } from "../../../constants/projects";
+import GridBg from "../../ui/BackgroundBg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,9 +57,16 @@ const Projects = () => {
   };
 
   return (
-    <section ref={sectionRef} id="projects" className="py-20 bg-zinc-900">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="py-20 z-50 relative text-zinc-100"
+    >
+      <GridBg />
       <div className="  mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 z-50">
+          My Projects
+        </h2>
 
         <ProjectFilter
           activeFilter={activeFilter}

@@ -1,34 +1,69 @@
 import Icon from "../common/Icon";
-import ThemeToggle from "./ThemeToggle";
 import { navLinks } from "../../constants/navLinks";
+import { useState } from "react";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="fixed w-full top-0 z-50  backdrop-blur-sm shadow-sm">
-      <div className="  mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="flex items-center gap-2">
-          <Icon icon="mdi:code-braces" className="text-2xl text-primary-500" />
-          <span className="font-bold text-xl">YourName</span>
-        </a>
+    <header className="fixed w-full top-0 z-50 ">
+      <div className="container mx-auto p-2">
+        {/* Main Header Bar */}
+        <div className="flex justify-between items-center h-16 px-8">
+          {/* Logo */}
+          <a href="/" className="flex items-center gap-2 ">
+            <Icon
+              icon="simple-icons:devbox"
+              className="text-2xl text-sky-500"
+            />
+            <span className="font-bold text-3xl text-sky-500">Yasser</span>
+          </a>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={link.href}
-              className="hover:text-primary-500 transition-colors"
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.href}
+                className="text-sky-400  hover:text-sky-500  font-semibold transition-colors"
+              >
+                {link.text}
+              </a>
+            ))}
+          </nav>
+
+          {/* Right Side Controls */}
+          <div className="md:hidden flex items-center gap-4 z-50">
+            <button
+              className="md:hidden p-2 rounded-md hover:bg-sky-100 dark:hover:bg-sky-800 transition-colors"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
             >
-              {link.text}
-            </a>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
-          <button className="md:hidden">
-            <Icon icon="mdi:menu" className="text-2xl" />
-          </button>
+              <Icon
+                icon={menuOpen ? "mdi:close" : "mdi:menu"}
+                className="text-xl"
+              />
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <div className="md:hidden pb-4">
+            <nav className="flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  className="px-4 py-3 rounded-md text-sky-700  hover:bg-sky-100 transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.text}
+                </a>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
