@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import ProjectFilter from "./ProjectFilter";
 import { projects } from "../../../constants/projects";
 import GridBg from "../../ui/BackgroundBg";
+import BlurText from "../../ui/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,18 +56,25 @@ const Projects = () => {
       cardsRef.current.push(el);
     }
   };
-
+  const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+  };
   return (
     <section
       ref={sectionRef}
       id="projects"
-      className="py-20 z-50 relative text-zinc-100"
+      className="py-10 z-50 relative text-zinc-100"
     >
       <GridBg />
-      <div className="  mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 z-50">
-          My Projects
-        </h2>
+      <div className="container  mx-auto px-4">
+        <BlurText
+          text="Projects"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          onAnimationComplete={handleAnimationComplete}
+          className=" text-3xl md:text-5xl text-white font-semibold flex justify-center mb-10"
+        />
 
         <ProjectFilter
           activeFilter={activeFilter}

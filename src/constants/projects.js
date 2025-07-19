@@ -7,8 +7,8 @@ export const projects = [
     id: 1,
     title: "FutShop E-commerce",
     description:
-      "Modern sports e-commerce platform with product filtering, cart functionality, and smooth animations",
-    tags: ["React", "Gsap", "Tailwind CSS", "Framer Motion"],
+      "Modern  e-commerce platform with product filtering, cart functionality, and smooth animations",
+    tags: ["React", "Gsap", "Tailwind CSS", "Framer Motion", "Ecommerce"],
     image: futshop,
     github: "https://github.com/yourusername/futshop",
     live: "https://futshop.vercel.app/",
@@ -19,7 +19,7 @@ export const projects = [
     title: "Medical Clinic Management",
     description:
       "Patient management system for medical clinics with appointment scheduling",
-    tags: ["React", "Material UI", "FullCalendar", "Formik"],
+    tags: ["React", "Material UI", "FullCalendar"],
     image: cabinet,
     github: "https://github.com/yourusername/clinic-management",
     live: "https://cabinet-medical-pfe.onrender.com/",

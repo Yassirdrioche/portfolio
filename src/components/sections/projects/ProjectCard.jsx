@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className="bg-sky-800/30   rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+      className="bg-sky-800/30  h-96  rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
     >
       <div className="h-48 overflow-hidden">
         <img
@@ -21,17 +21,6 @@ const ProjectCard = ({ project }) => {
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-sky-400  mb-4">{project.description}</p>
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-1 bg-sky-300/40  text-sm rounded"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
 
         <div className="flex gap-4">
           {project.github && (

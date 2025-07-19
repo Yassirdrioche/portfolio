@@ -1,5 +1,5 @@
 const ProjectFilter = ({ activeFilter, onChange }) => {
-  const filters = ["All", "React", "Next.js", "Tailwind"];
+  const filters = ["All", "React", "Next.js"];
 
   return (
     <div className="flex flex-wrap justify-center gap-3 z-50 relative">

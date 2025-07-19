@@ -14,14 +14,17 @@
   h5,
   h6 {
     @apply font-bold;
-    background-color: linear-gradient(
-        rgba(2, 133, 199, 0.493) 1px,
-        transparent 1px
-      ),
-      linear-gradient(90deg, rgba(2, 133, 199, 0.493) 1px, transparent 1px);
   }
 
   a {
     @apply transition-colors;
   }
+}
+body {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+}
+textarea::placeholder,
+input::placeholder {
+  color: rgba(255, 255, 255, 0.856);
 }

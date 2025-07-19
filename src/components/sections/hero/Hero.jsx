@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import BlurText from "../../ui/BlurText";
 import GridBg from "../../ui/BackgroundBg";
+import DotGrid from "../../ui/DotGrid";
 // Constants for reusable data
 const SOCIAL_LINKS = [
   { icon: "mdi:github", name: "GitHub" },
@@ -199,9 +200,8 @@ const Hero = () => {
     <section
       ref={refs.hero}
       id="home"
-      className=" min-h-screen py-16  z-50 relative flex items-center justify-center  overflow-hidden"
+      className=" min-h-screen py-20  z-50 relative flex items-center justify-center  overflow-hidden"
     >
-      {/* Grid background */}
       <GridBg />
 
       {/* Particles */}

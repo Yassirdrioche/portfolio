@@ -1,12 +1,14 @@
 import Icon from "../common/Icon";
 import { navLinks } from "../../constants/navLinks";
 import { useState } from "react";
+import GridBg from "../ui/BackgroundBg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full top-0 z-50 ">
+    <header className="fixed w-full top-0 z-[999] bg-zinc-950 ">
+      <GridBg/>
       <div className="container mx-auto p-2">
         {/* Main Header Bar */}
         <div className="flex justify-between items-center h-16 px-8">
