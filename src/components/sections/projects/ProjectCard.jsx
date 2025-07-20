@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
 
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-sky-400  mb-4">{project.description}</p>
+        <p className="text-sky-400  mb-4 line-clamp-3">{project.description}</p>
 
         <div className="flex gap-4">
           {project.github && (

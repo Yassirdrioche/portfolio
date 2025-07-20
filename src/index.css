@@ -21,10 +21,21 @@
   }
 }
 body {
-  font-family: "Electrolize", sans-serif;
-  font-weight: 400;
+  /* font-family: "Exo", sans-serif; */
+  /* font-family: "Raleway", sans-serif; */
+  /* font-weight: 400; */
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 textarea::placeholder,
 input::placeholder {
   color: rgba(255, 255, 255, 0.856);
+}
+h6 {
+  color: #1d7ca1, #146da89d, #558baf9c;
+}
+.blur_word {
+  font-family: "Julius Sans One", sans-serif;
+  z-index: 1000;
 }

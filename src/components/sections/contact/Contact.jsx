@@ -4,8 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative z-50 py-10 mb-20">
-     
+    <section id="contact" className="relative z-50 py-10 ">
       <GridBg />
       <div className="mx-auto px-4">
         <BlurText
@@ -13,7 +12,7 @@ const Contact = () => {
           delay={150}
           animateBy="words"
           direction="top"
-          className="text-3xl md:text-4xl flex justify-center text-white font-semibold mb-10"
+          className="text-3xl md:text-5xl flex justify-center text-white font-semibold mb-10"
         />
 
         <p className="text-center max-w-2xl mx-auto mb-12 text-sky-500">

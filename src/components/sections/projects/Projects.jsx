@@ -81,7 +81,7 @@ const Projects = () => {
           onChange={handleFilterChange}
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}

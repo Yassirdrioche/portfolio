@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Medical Clinic Management",
+    title: "Clinic Management",
     description:
       "Patient management system for medical clinics with appointment scheduling",
     tags: ["React", "Material UI", "FullCalendar"],

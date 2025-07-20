@@ -50,7 +50,7 @@ const Experience = () => {
             delay={150}
             animateBy="words"
             direction="top"
-            className="text-3xl md:text-4xl text-center text-white font-semibold mb-10"
+            className="text-3xl md:text-5xl text-center text-white font-semibold mb-10"
           />
         </section>
 
