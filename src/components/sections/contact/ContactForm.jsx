@@ -118,7 +118,7 @@ const ContactForm = () => {
           <p className="text-sky-400">I'll get back to you soon. Thank you!</p>
           <button
             onClick={resetForm}
-            className="mt-6 px-6 py-2 bg-sky-600 text-sky-700 rounded-full shadow-md hover:bg-sky-400 transition-all"
+            className="mt-6 px-6 py-2 bg-sky-600 text-sky-200 rounded-full shadow-md hover:bg-sky-400 transition-all"
           >
             Send Another Message
           </button>

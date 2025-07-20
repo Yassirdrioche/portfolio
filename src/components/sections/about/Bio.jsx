@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Icon from "../../common/Icon";
 import BlurText from "../../ui/BlurText";
-
+import resume from "../../../assets/pdf/resume.pdf";
 const Bio = () => {
   const containerRef = useRef();
   const headingRef = useRef();
@@ -160,7 +160,7 @@ const Bio = () => {
         <div className="mt-12 flex flex-wrap gap-4">
           <a
             ref={addButtonRef}
-            href="/resume.pdf"
+            href={resume}
             download
             className="flex items-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition-colors"
           >

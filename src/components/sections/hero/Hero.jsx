@@ -12,10 +12,21 @@ import GridBg from "../../ui/BackgroundBg";
 import DotGrid from "../../ui/DotGrid";
 // Constants for reusable data
 const SOCIAL_LINKS = [
-  { icon: "mdi:github", name: "GitHub" },
-  { icon: "mdi:linkedin", name: "LinkedIn" },
-  { icon: "mdi:twitter", name: "Twitter" },
-  { icon: "mdi:dribbble", name: "Dribbble" },
+  {
+    icon: "mdi:github",
+    name: "GitHub",
+    href: "https://github.com/Yassirdrioche",
+  },
+  {
+    icon: "mdi:linkedin",
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/yasser-dreouech-a44b97326/",
+  },
+  {
+    icon: "mdi:email",
+    name: "LinkedIn",
+    href: "mailto:yassirdrioche@gmail.com",
+  },
 ];
 
 const TECH_STACK = [
@@ -258,7 +269,7 @@ const Hero = () => {
             {SOCIAL_LINKS.map((social) => (
               <a
                 key={social.name}
-                href="#"
+                href={social.href}
                 className="social-icon w-12 h-12 flex items-center justify-center rounded-xl backdrop-blur-sm  bg-sky-800/10 shadow-lg hover:shadow-sky-300/20 transition-all hover:-translate-y-1 text-sky-500  hover:text-sky-600  border border-white/20  hover:border-sky-300/30"
               >
                 <Icon icon={social.icon} className="text-2xl" />
@@ -273,37 +284,40 @@ const Hero = () => {
               ref={refs.btns}
             >
               {/* Primary Glass Button - Futuristic sky */}
-              <a></a>{" "}
-              <button className="px-4 py-2 bg-gradient-to-br  from-sky-500/30 to-sky-600/40 hover:from-sky-500/40 hover:to-sky-600/50 text-white rounded-2xl font-medium shadow-lg hover:shadow-sky-500/20 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-sky-400/30 backdrop-blur-lg">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-400/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative z-10 flex items-center gap-3 text-lg justify-center">
-                  <Icon
-                    icon="ph:rocket-launch"
-                    className="w-6 h-6 transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110"
-                  />
-                  <span className="relative">
-                    Explore Projects
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+              <a href="#projects">
+                <button className="px-4 py-2 bg-gradient-to-br  from-sky-500/30 to-sky-600/40 hover:from-sky-500/40 hover:to-sky-600/50 text-white rounded-2xl font-medium shadow-lg hover:shadow-sky-500/20 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-sky-400/30 backdrop-blur-lg">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-400/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="relative z-10 flex items-center gap-3 text-lg justify-center">
+                    <Icon
+                      icon="ph:rocket-launch"
+                      className="w-6 h-6 transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110"
+                    />
+                    <span className="relative">
+                      Explore Projects
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                    </span>
                   </span>
-                </span>
-                <div className="absolute inset-0 bg-white/5 backdrop-blur-md"></div>
-              </button>
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-md"></div>
+                </button>
+              </a>
               {/* Secondary Glass Button - Cyber Neon */}
-              <button className="px-4 py-2 bg-gradient-to-br from-gray-900/40 to-gray-800/50 hover:from-gray-800/50 hover:to-gray-700/60 text-gray-100 rounded-2xl font-medium shadow-lg hover:shadow-sky-500/10 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-gray-700/50 backdrop-blur-lg">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-400/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative z-10 flex items-center gap-3 text-lg justify-center">
-                  <Icon
-                    icon="ph:chats-circle"
-                    className="w-6 h-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-sky-300"
-                  />
-                  <span className="relative">
-                    Let's Connect
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
+              <a href="#contact">
+                <button className="px-4 py-2 bg-gradient-to-br from-gray-900/40 to-gray-800/50 hover:from-gray-800/50 hover:to-gray-700/60 text-gray-100 rounded-2xl font-medium shadow-lg hover:shadow-sky-500/10 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden border border-gray-700/50 backdrop-blur-lg">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-400/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="relative z-10 flex items-center gap-3 text-lg justify-center">
+                    <Icon
+                      icon="ph:chats-circle"
+                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-sky-300"
+                    />
+                    <span className="relative">
+                      Let's Connect
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-400 group-hover:w-full transition-all duration-300"></span>
+                    </span>
                   </span>
-                </span>
-                <div className="absolute inset-0 bg-black/10 backdrop-blur-md"></div>
-                <div className="absolute -bottom-px left-4 right-4 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </button>
+                  <div className="absolute inset-0 bg-black/10 backdrop-blur-md"></div>
+                  <div className="absolute -bottom-px left-4 right-4 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </button>
+              </a>
             </div>
           }
           {/* Tech stack */}
