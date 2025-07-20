@@ -1,6 +1,6 @@
 import Icon from "../common/Icon";
 import Aurora from "../ui/Aurora";
-
+import logo from "../../assets/picture/mylogo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -23,14 +23,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
           <div className="flex flex-col items-start">
-            <div className="flex items-center gap-3 mb-4 group">
-              <Icon
-                icon="mdi:code-braces"
-                className="text-3xl text-sky-300 group-hover:text-sky-100 transition-all duration-500 group-hover:rotate-12"
+            <div className="flex  mb-4 ">
+              <img
+                src={logo}
+                alt="logo"
+                loading="lazy"
+                className="h-auto w-24"
               />
-              <span className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-sky-400 group-hover:from-sky-100 group-hover:to-sky-300 transition-all duration-500">
-                Yasser
-              </span>
             </div>
             <p className="text-sky-200/80 text-sm mb-6 leading-relaxed">
               Crafting beautiful digital experiences with modern technologies.
