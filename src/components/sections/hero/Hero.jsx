@@ -1,8 +1,8 @@
-import { useRef, useEffect, useMemo } from "react";
+import { useRef, useEffect, useMemo, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
-import avatar from "../../../assets/avatar.png";
+import avatar from "../../../assets/ME.jpg";
 
 // Register GSAP plugins once
 gsap.registerPlugin(ScrollTrigger);
@@ -43,6 +43,7 @@ const Hero = () => {
   const handleAnimationComplete = () => {
     console.log("Animation completed!");
   };
+  const [isLoading, SetIsLoading] = useState(false);
   // Refs organized by related elements
   const refs = {
     hero: useRef(),
@@ -206,6 +207,14 @@ const Hero = () => {
     return () => ctx.revert(); // Cleanup all animations
   }, []); // Empty dependency array ensures this runs once
 
+  useEffect(() => {
+    const load = () => {
+      setTimeout(() => {
+        SetIsLoading(true);
+      }, 3000);
+    };
+    load();
+  });
   return (
     <section
       ref={refs.hero}
@@ -337,23 +346,30 @@ const Hero = () => {
         </div>
 
         {/* Profile image */}
-        <div
-          ref={refs.imageContainer}
-          className="relative"
-          style={{ willChange: "transform" }}
-        >
+        {isLoading ? (
           <div
-            ref={refs.image}
-            className="w-64 h-64 md:w-80 md:h-full rounded-2xl border-4 border-sky-700 drop-shadow-md shadow-sky-500/45  shadow-2xl relative z-10"
+            ref={refs.imageContainer}
+            className="relative"
+            style={{ willChange: "transform" }}
           >
-            <img
-              src={avatar}
-              alt="Yasser's avatar"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <div
+              ref={refs.image}
+              className="w-64 h-64 md:w-80 md:h-full rounded-3xl border-4 border-sky-700 drop-shadow-md shadow-sky-500/45  shadow-2xl relative z-10"
+            >
+              <img
+                src={avatar}
+                alt="Yasser's avatar"
+                className="w-full h-full object-cover rounded-2xl"
+                loading="lazy"
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          <Icon
+            icon={"eos-icons:bubble-loading"}
+            className="text-sky-400 text-6xl mr-24"
+          />
+        )}
       </div>
 
       {/* Scroll indicator */}

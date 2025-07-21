@@ -67,21 +67,20 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "Home", href: "#home", icon: "mdi:home" },
+                { name: "Hero", href: "#hero" },
+                { name: "Experience", href: "#experience" },
                 {
                   name: "Projects",
                   href: "#projects",
-                  icon: "mdi:code-braces",
                 },
-                { name: "About", href: "#about", icon: "mdi:account" },
-                { name: "Contact", href: "#contact", icon: "mdi:email" },
+                { name: "About", href: "#about" },
+                { name: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     className="text-sky-300/80 hover:text-sky-100 transition-colors flex items-center gap-2 group"
                   >
-                    <Icon icon={link.icon} className="text-sky-400 text-sm" />
                     {link.name}
                   </a>
                 </li>
