@@ -54,7 +54,7 @@ const Header = () => {
                 <a
                   key={link.id}
                   href={link.href}
-                  className="px-4 py-3 rounded-md text-sky-400  hover:bg-sky-100 transition-colors"
+                  className="px-4 py-3 rounded-md text-sky-400  hover:bg-sky-400/50 transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.text}

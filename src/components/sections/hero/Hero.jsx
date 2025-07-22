@@ -244,7 +244,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
         {/* Text content */}
         <div className=" lg:text-left max-w-2xl space-y-8">
-          <div className="flex md:justify-start justify-center">
+          <div className="flex lg:justify-start justify-center">
             <BlurText
               text="Hello ,"
               delay={150}
@@ -264,7 +264,7 @@ const Hero = () => {
           </div>
 
           <div ref={refs.subtitle} className="font-medium">
-            <h2 className="text-xl md:text-2xl  text-sky-600 flex md:justify-start justify-center items-center">
+            <h2 className="text-xl md:text-2xl  text-sky-600 flex lg:justify-start justify-center items-center">
               Frontend Developer & UI Specialist
             </h2>
           </div>
@@ -288,7 +288,7 @@ const Hero = () => {
           {/* CTA buttons */}
           {
             <div
-              className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start"
+              className="flex flex-wrap items-center gap-5 justify-center lg:justify-start"
               ref={refs.btns}
             >
               {/* Primary Glass Button - Futuristic sky */}
