@@ -63,7 +63,7 @@ const Projects = () => {
     <section
       ref={sectionRef}
       id="projects"
-      className="py-10 z-50 relative text-zinc-100"
+      className="py-20 z-50 relative text-zinc-100 "
     >
       <GridBg />
       <div className="container  mx-auto px-4">

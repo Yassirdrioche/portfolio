@@ -43,7 +43,7 @@ const About = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="relative py-10  z-50">
+    <section ref={sectionRef} id="about" className="relative py-20  z-50">
       <GridBg />
       <div className="mx-auto px-4 ">
         <div ref={contentRef} className="grid md:grid-cols-2 gap-12">
