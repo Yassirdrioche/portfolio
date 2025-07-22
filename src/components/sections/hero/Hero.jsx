@@ -2,7 +2,7 @@ import { useRef, useEffect, useMemo, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
-import avatar from "../../../assets/ME.jpg";
+import avatar from "../../../assets/avatar.png";
 
 // Register GSAP plugins once
 gsap.registerPlugin(ScrollTrigger);

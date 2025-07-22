@@ -41,3 +41,13 @@ h6 {
   font-family: "Julius Sans One", sans-serif;
   z-index: 1000;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d7ca1;
+  border-radius: 10px;
+}
